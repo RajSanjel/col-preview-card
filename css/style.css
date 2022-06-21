@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --very-light-gray: hsl(0, 0%, 95%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    margin: 100px 0;
+    display: grid;
+    grid-auto-flow: row;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+    width: 250px;
+    height: 450px;
+    padding: 20px 40px;
+    display: grid;
+    text-align: left;
+    align-items: center;
+}
+
+.col-1 {
+    background-color: var(--bright-orange);
+}
+
+.col-2 {
+    background-color: var(--dark-cyan);
+}
+
+.col-3 {
+    background-color: var(--very-dark-cyan);
+}
+
+.col-1 h2,
+.col-2 h2,
+.col-3 h2 {
+    color: white;
+    font-family: "Big Shoulders Display";
+    text-transform: uppercase;
+    font-size: 45px;
+    margin-top: -15%;
+}
+
+.col-1 p,
+.col-2 p,
+.col-3 p {
+    color: var(--transparent-white);
+    font-family: "Lexend Deca";
+    font-size: 15px;
+    line-height: 25px;
+    width: 95%;
+    margin-top: -15%;
+}
+
+.learn-more {
+    background-color: white;
+    border: none;
+    border-radius: 100vmax;
+    font-size: 15px;
+    width: 140px;
+    height: 45px;
+    font-family: 'Lexend Deca';
+    margin-top: -15%;
+}
+
+.col-1 .learn-more {
+    color: var(--bright-orange);
+}
+
+.col-2 .learn-more {
+    color: var(--dark-cyan);
+}
+
+.col-3 .learn-more {
+    color: var(--very-dark-cyan);
+}
+
+@media (min-width:950px) {
+    main {
+        margin: 100px 0;
+        display: grid;
+        grid-auto-flow: column;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3 {
+        width: 220px;
+        height: 450px;
+        text-align: start;
+    }
+
+    .col-1 p,
+    .col-2 p,
+    .col-3 p {
+        margin-top: -30%;
+    }
+
+    .col-1 h2,
+    .col-2 h2,
+    .col-3 h2 {
+        margin-top: -30%;
+    }
+.learn-more:hover{
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+}
